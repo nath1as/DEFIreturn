@@ -67,7 +67,40 @@ router.post("/wallet/:id/:chain/:protcol_id", walletController.walletCostBasisFo
  *         description: The current execution progress or result is returned.
  */
 router.get("/status/:id", walletController.walletStatus);
-router.get("/nathias/:id", getUSDTBalance);
+/**
+ * @openapi
+ * /nathiasapitest/{id}:
+ *   get:
+ *     summary: Fetch the USDT balance for the wallet
+ *     description: Returns the USDT balance for a given wallet address.
+ *     tags: [USDT]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: The wallet address to fetch USDT balance for.
+ *     responses:
+ *       200:
+ *         description: Successful response
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 walletAddress:
+ *                   type: string
+ *                   description: The wallet address provided.
+ *                 usdtBalance:
+ *                   type: string
+ *                   description: The USDT balance of the wallet.
+ *       400:
+ *         description: Invalid wallet address provided.
+ *       500:
+ *         description: Error fetching the balance.
+ */
+router.get("/nathiasapitest/:id", getUSDTBalance);
 
 /**
  * @openapi
