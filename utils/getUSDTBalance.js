@@ -1,6 +1,7 @@
 const Web3 = require("web3");
 
-//from https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code
+//  copied contract data from:
+// from https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7#code
 const USDT_CONTRACT_ADDRESS = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
 const USDT_ABI = [
   {

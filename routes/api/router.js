@@ -67,6 +67,8 @@ router.post("/wallet/:id/:chain/:protcol_id", walletController.walletCostBasisFo
  *         description: The current execution progress or result is returned.
  */
 router.get("/status/:id", walletController.walletStatus);
+
+// added the swagger decorator and the api route 
 /**
  * @openapi
  * /nathiasapitest/{id}:
